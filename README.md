@@ -1,6 +1,7 @@
 # 5.AirflowDataPipeline
 
 AirflowDataPipeline is a data collection project designed to automate the process of extracting data from a website and storing it in a SQL database using Airflow.In summary, AirflowDataPipeline provides a powerful and efficient way to collect and store data from a website in a SQLite database using Airflow, offering a scalable and reliable solution for data collection and management.
+The project is specifically designed to run on a daily basis, ensuring that the latest data is always available in the database. The data is collected from the website's API in JSON format, then transformed and loaded into the SQL database.
 
 ## Installation
 
@@ -36,8 +37,6 @@ Open linux command line
 - add dags in /workspace/airflow/dags
 - airflow standalone
 - in your favorite browser open http://localhost:8080
-- 
-![obraz](https://user-images.githubusercontent.com/105165580/231084365-b277fb66-3795-4857-b307-d4cc3fa33ab4.png)
 > Where **login** : **admin** **/workspace/airflowstandalone_admin_password.txt** or in **command line**
 - Run dag_1 > Trigger DAG
 
