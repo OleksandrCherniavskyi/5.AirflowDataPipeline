@@ -39,4 +39,3 @@ Open linux command line
 - in your favorite browser open http://localhost:8080
 > Where **login** : **admin** **/workspace/airflowstandalone_admin_password.txt** or in **command line**
 - Run dag_1 > Trigger DAG
-
