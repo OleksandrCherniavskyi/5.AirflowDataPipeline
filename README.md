@@ -36,6 +36,8 @@ Open linux command line
 - add dags in /workspace/airflow/dags
 - airflow standalone
 - in your favorite browser open http://localhost:8080
+- 
+![obraz](https://user-images.githubusercontent.com/105165580/231084365-b277fb66-3795-4857-b307-d4cc3fa33ab4.png)
 > Where **login** : **admin** **/workspace/airflowstandalone_admin_password.txt** or in **command line**
 - Run dag_1 > Trigger DAG
 
