@@ -21,8 +21,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: execute py script # run dag_1.py
-      env:
-        SOME_SECRET: ${{ secrets.SOME_SECRET }}
+
       run: python dag_1.py
     
     - name: commit files
