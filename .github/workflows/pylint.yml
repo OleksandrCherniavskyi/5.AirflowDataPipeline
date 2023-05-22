@@ -1,0 +1,30 @@
+name: run dag_1
+
+on:
+  schedule:
+    - cron: '0 */24 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: execute py script # run dag_1.py
+      env:
+        SOME_SECRET: ${{ secrets.SOME_SECRET }}
+      run: python dag_1.py
+    
+    - name: Analysing the code with pylint
+      run: |
+        pylint $(git ls-files '*.py')
